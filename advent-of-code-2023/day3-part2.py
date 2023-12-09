@@ -6,6 +6,11 @@ lines = """
 """.split("\n")
 
 
+"""
+Find all * that are adjacent to exactly 2 numbers,
+then multiply the numbers, and sum them up
+"""
+
 line_lenght = len(lines[1]) # just in case 0 is empty
 
 numbers = {}

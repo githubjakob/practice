@@ -1,10 +1,14 @@
 
 
-lines = (
-    """467..114..
-    ...*......
-    ..35..633.""".split("\n")
-    )
+lines = """
+421..412..
+...*......
+""".split("\n")
+
+"""
+Find all numbers that are adjacent to a symbol
+e.g. 421 is adjacent to *, but 412 is not
+"""
 
 numbers = {}
 

@@ -2,6 +2,13 @@ import regex
 
 input = """1five7396484"""
 
+"""
+Get the first and last digit of each line
+but words can also be "digits"
+concatenate the digits
+sum them up
+"""
+
 values = []
 
 valid_digit = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"]

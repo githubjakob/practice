@@ -6,6 +6,11 @@ max_num_color = {
     "blue": 14,
 }
 
+"""
+Sum the IDs of the games that are possible 
+given a number of x red, y green and z blue cards
+"""
+
 sum_game_ids = 0
 
 for line in lines.split("\n"):
