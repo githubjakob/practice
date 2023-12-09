@@ -7,8 +7,13 @@ max_num_color = {
 }
 
 """
-Sum the IDs of the games that are possible 
+Sum the "IDs" of the games that are possible 
 given a number of x red, y green and z blue cards
+
+For example:
+Given 1 red, 1 green, 1 blue 
+
+Game 1: 5 red, 1
 """
 
 sum_game_ids = 0

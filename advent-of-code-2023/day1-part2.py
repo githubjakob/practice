@@ -1,19 +1,24 @@
 import regex
 
-input = """1five7396484"""
+input = """1five7396484
+sevenasdf4"""
 
 """
 Get the first and last digit of each line
-but words can also be "digits"
-concatenate the digits
-sum them up
+but now, in contrast to part 1, words can also be "digits"
+concatenate the digits and sum them up
+
+For example:
+1five7396484 => 14
+onejfa12nfz3 => 13
+
+sum => 27
 """
 
 values = []
 
-valid_digit = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"]
-
 word_to_number = {
+    "zero": 0,
     "one": 1,
     "two": 2,
     "three": 3,
@@ -25,10 +30,12 @@ word_to_number = {
     "nine": 9,
 }
 
+valid_digit = [str(d) for d in word_to_number.values()]
+
 valid_word = list(word_to_number.keys())
 
 for line in input.split("\n"):
-    # zero?
+    # use regex instead of re, so that we get "overlappings", e.g. oneight => [1, 8]
     parts = regex.findall(r'one|two|three|four|five|six|seven|eight|nine|ten|\d|[a-zA-Z]', line, overlapped=True)
     line = [word_to_number[c] if c in valid_word else c for c in parts]
     line = [int(c) if c in valid_digit else c for c in line]
