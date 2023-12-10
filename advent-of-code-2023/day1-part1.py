@@ -6,6 +6,9 @@ values = []
 Get the first and last digit of each line
 concatenate the digits
 sum them up
+
+For example:
+a4fasdf7asdf => 47 
 """
 
 for line in input.split("\n"):
