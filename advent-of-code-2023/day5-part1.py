@@ -50,6 +50,7 @@ for line in lines:
         target_start = int(mapping[0])
         length = int(mapping[2])
 
+        # curry to make the source_start, target_start, and length vars available in mapping_func ??
         def mapping_func_curry(source_start, target_start, length):
 
             def mapping_func(input):
@@ -63,8 +64,9 @@ for line in lines:
 
             return mapping_func
         
+        # not needed actually
         mappings[map_index][map_category_index] = {
-            "source_start": mapping[1],
+            "source_start": mapping[1],  
             "target_start": mapping[0],
             "length": mapping[2],
             "func": mapping_func_curry(source_start, target_start, length),
